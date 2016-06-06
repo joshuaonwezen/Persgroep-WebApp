@@ -1,0 +1,114 @@
+
+.list-view{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex:100%;
+    max-width:1000px;
+    padding:1em;
+    padding-top:2em;
+}
+aside{
+}
+.list-view > article{    
+    margin: 0.5em;
+    margin-bottom: 1em;
+    margin-top:0;
+    background-color:#FFF;
+    flex:40%;
+}
+.list-view > article:hover{
+    opacity:0.8;
+}
+.list-view > article a{
+    color:#000;
+}
+.article-textblock{
+    padding:1em;
+}
+img{
+    width:100%;
+}
+.container-row{
+    display:flex;
+    justify-content:center;
+}
+.article-textblock-author{
+    font-family: 'Bree Serif', serif;
+    font-style: italic;
+}
+
+/* Bounce Out */
+.hvr-bounce-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-out:hover, .hvr-bounce-out:focus, .hvr-bounce-out:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.aside-list{
+    padding: 1em;
+    margin:2em;
+    margin-left: 0;
+    height:100%;
+
+
+    background-color:#FFF;
+    border-radius:5px;
+}
+.aside-list > h2{
+    font-family: 'Bree Serif', serif;
+}
+.aside-list a{
+    color:#000;
+}
+.article_header{
+    height:10em;
+    max-height:10em;
+    min-height:10m;
+    overflow: hidden;
+    position:relative;
+}
+.article_header > img{
+    top:-20%;
+    left:0;
+    position:absolute;
+}
+.article_header > h2{
+    font-family: 'Bree Serif', serif;
+    position: absolute;
+    background: #FFF;
+    padding: 0.5em;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    top: 4.3em;
+    left:0;
+}
+.article_header a{
+    color:#000;
+}
+
+@media all and (min-width:800px){
+    .article_header > h2{
+        left:50%;
+        top:11em;
+    }
+    .article_header{
+        height:20em;
+        max-height: 20em;
+        min-height:20em;
+    }
+}

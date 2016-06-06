@@ -1,0 +1,71 @@
+
+header{
+    background-color: #551010;
+    color:#FFF;
+    font-family: Coneria;
+    display:flex;
+    justify-content:center;
+}
+.container-header{
+    height:5em;
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    max-width:1000px;
+}
+.container-header > h1{
+    margin:auto;
+    cursor:pointer;
+}
+.container-header > h1 > a{
+    color:#FFF;
+}
+nav{
+    display:flex;
+    margin:auto;
+}
+ul{
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+    
+    display:flex;
+}
+li{
+    padding:0.5em;
+    border-radius:8px;
+    background-color:#FFF;
+    margin:0.5em;
+}
+li:hover{
+    opacity:0.8;
+    cursor:pointer;
+}
+li > a{
+    color:#000;
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}

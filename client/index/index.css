@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Coneria;
+    src: url(fonts/Demo_ConeriaScript.ttf);
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bree Serif'), local('BreeSerif-Regular'), url(https://fonts.gstatic.com/s/breeserif/v5/0daoUMW28nkWOnFz2G4AAiEAvth_LlrfE80CYdSH47w.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bree Serif'), local('BreeSerif-Regular'), url(https://fonts.gstatic.com/s/breeserif/v5/LQ7WLTaITDg4OSRuOZCps_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+html{
+    font-family: Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    background-color: #752828;
+    height: 100%;
+    min-height: -webkit-calc(100% - 5em);     /* Chrome */
+    min-height: -moz-calc(100% - 5em);     /* Firefox */
+    min-height: calc(100% - 5em);     /* native */
+}
+footer{
+    background-color: #8C4646;
+    position: relative;
+    clear:both;
+    height:5em;
+    display:flex;
+}
+footer > span{
+    font-family: 'Bree Serif', serif;
+    color:#FFF;
+    margin:auto;
+}
+h1{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+h2{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0.83em;
+}
+h3{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0.5em;
+    font-family: 'Bree Serif', serif;
+}
+a{
+    text-decoration: none;
+    cursor: auto;
+}
+
+
+
+
+
+
+@media all and (min-width:800px){
+    section{
+/*        margin-left:2em;
+        margin-right:2em;
+        margin: 2em;
+        border: 2px solid #551010;*/
+    }
+}

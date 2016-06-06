@@ -1,0 +1,37 @@
+<template name="navigation">
+    <header>
+        <div class="container-header">
+            <h1>
+                <a href="{{pathFor route='article'}}">Persgroep</a>
+            </h1>
+            <nav>
+                <ul>
+                    {{#if currentUser}}
+                    <li class="hvr-bounce-in">
+                        <a href="#" class="logout">Logout</a>
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <a href="{{pathFor route='write'}}">Schrijven</a>
+                    </li>
+                    {{else}}
+                    <li class="hvr-bounce-in">
+                        <a href="{{pathFor route='register'}}">Register</a>
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <a href="{{pathFor route='login'}}">Login</a>
+                    </li>
+                    {{/if}}
+                    <li class="hvr-bounce-in">
+                        <a  href="{{pathFor route='category'}}">Categorieën</a>
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <a  href="{{pathFor route='photo'}}">Foto's</a>
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <a  href="{{pathFor route='video'}}">Video</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</template>

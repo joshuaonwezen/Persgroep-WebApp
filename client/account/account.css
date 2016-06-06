@@ -1,0 +1,9 @@
+#login-buttons a{
+    color:#000;
+    font-family: 'Bree Serif', serif;
+    text-decoration: none;
+}
+#login-dropdown-list{
+    top:40%;
+    position:fixed;
+}
