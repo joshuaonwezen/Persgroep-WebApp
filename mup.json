@@ -30,7 +30,7 @@
   "appName": "Persgroep",
 
   // Location of app (local directory)
-  "app": "D:/Projects/Meesterproef/app",
+  "app": "C:\Users\Joshu\Desktop\meesterproef-persgroep",
 
   // Configure environment
   "env": {

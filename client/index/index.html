@@ -5,12 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div class="wrapper">
         {{> navigation}}
-
+        <div class="content">
         {{> yield}}
+        </div>
         <footer>
             <span>©2016 Joshua Onwezen</span>
         </footer>
-
+        </div>
     </body>
 </template>

@@ -1,0 +1,20 @@
+<template name="article_detail"> 
+    <section class="article-detail--content">
+        <article>
+            <h1>{{title}}</h1>
+            <span class="article--detail--author">door {{author}}</span>
+            <img src="{{image}}">
+            
+            <div class="article--detail--content--target">
+
+            </div>
+            <div>
+                 <img class="article-textblock--likes-icon" src="../img/like.png">
+                 {{likes}} 
+                 <button class="article-detail--like">Like</button>
+                 <img class="social-media-icon" src="../img/socialmedia.png">
+            </div>
+
+        </article>
+    </section>
+</template>

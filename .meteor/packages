@@ -26,3 +26,6 @@ http
 teamon:tinymce
 tomi:upload-server
 tomi:upload-jquery
+mediumeditor:mediumeditor
+twbs:bootstrap
+peppelg:bootstrap-3-modal

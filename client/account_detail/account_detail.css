@@ -1,0 +1,9 @@
+.account--content{
+    display:flex;
+    flex-direction:column;
+    height: 939px;
+}
+.account--content > article{
+    display:flex;
+    flex-direction:column;
+}

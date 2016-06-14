@@ -1,0 +1,28 @@
+<template name="account_detail"> 
+    <section class="account--content">
+        <label>{{name}}</label>
+        <label>{{experience}}</label>
+        <article class="account-commission--list">
+            {{#each Commission}}
+            <label>{{name}}</label>
+            <img src="{{image}}">
+            {{/each}}
+        </article>
+        <article class="account-article--list">
+            {{#each Article}}
+            <div>
+                <label>{{title}}</label>
+                <button class="account-article--delete">X</button>
+            </div>
+            {{/each}}
+        </article>
+        <article class="account-trophy--list">
+            {{#each Trophy}}
+            <div>
+                <label>{{name}}</label>
+                <img src="{{image}}">
+            </div>
+            {{/each}}
+        </article>
+    </section>
+</template>

@@ -10,6 +10,7 @@
     padding-top:2em;
 }
 aside{
+    display:none;
 }
 .list-view > article{    
     margin: 0.5em;
@@ -23,6 +24,9 @@ aside{
 }
 .list-view > article a{
     color:#000;
+}
+.list-view > article a:hover{
+    text-decoration:underline;
 }
 .article-textblock{
     padding:1em;
@@ -81,6 +85,7 @@ img{
     min-height:10m;
     overflow: hidden;
     position:relative;
+    display:none;
 }
 .article_header > img{
     top:-20%;
@@ -101,6 +106,25 @@ img{
     color:#000;
 }
 
+a:hover{
+    text-decoration:none;
+}
+.article-list-view{
+    flex-direction:column;
+}
+.article-textblock--likes{
+    display: flex;
+    justify-content: space-between;
+}
+.article-textblock--likes-icon{
+    width: 25px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.article-textblock--likes-div{
+    min-width: 70px;
+    margin-left: 10px;
+}
 @media all and (min-width:800px){
     .article_header > h2{
         left:50%;
@@ -110,5 +134,11 @@ img{
         height:20em;
         max-height: 20em;
         min-height:20em;
+    }
+    .article-list-view{
+        flex-direction:row;
+    }
+    aside{
+        display:block;
     }
 }

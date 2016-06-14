@@ -1,24 +1,33 @@
+//import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
 Template.write_article.helpers({
 });
 
 Template.write_article.rendered = function () {
-    tinymce.init({
-        selector: 'textarea',
-        skin_url: '/packages/teamon_tinymce/skins/lightgray',
-        height: 400,
+    mediumEdit = new MediumEditor('#write-view--textarea', {
+        relativeContainer: $('#write-view--textarea'),
+        placeholder: {
+            text: 'Schrijf hier uw artikel'
+        }
     });
+    
+
+    
 };
 
 Template.write_article.events({
     'submit form': function (event) {
         event.preventDefault();
+
         
-        var contentTextarea = tinyMCE.activeEditor.getContent();
+        var contentTextarea = $('div[id*="medium-editor"]').html();
         var contentTitle = $('#write-view--title').val();
-        var contentSent = true;
-        if(contentTextarea == '' || contentTitle == ''){
+        var contentImage = $('#write-view--image').val();
+
+        if (contentTextarea == '' || contentTitle == '') {
             //show error
-        }else{
+        } else {
             //getting formatted date
             var today = new Date();
             var dd = today.getDate();
@@ -34,13 +43,20 @@ Template.write_article.events({
             }
 
             today = mm + '/' + dd + '/' + yyyy;
-            
-            Meteor.call('addArticle', contentTitle, contentTextarea, Meteor.user().firstname + Meteor.user().lastname, today, Meteor.user().id);
-            Router.go('/');
 
+            Meteor.call('addArticle', contentTitle, contentTextarea, Meteor.user().profile.firstname + ' ' + Meteor.user().profile.lastname, today, Meteor.user().profile.id, contentImage, 'article');
+            
+            Router.go('/');
+            
+            if(Meteor.user().profile.trophy.indexOf('trophy1') == -1){
+                setTimeout(function () {
+                    Modal.show('trophy_popup');
+                }, 3000);
+                Meteor.call('addTrophy', Meteor.user().profile.id, 'trophy1');
+            }
             //show confirmation
         }
-        
+
     },
 });
 

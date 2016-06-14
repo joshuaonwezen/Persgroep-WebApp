@@ -4,14 +4,26 @@
             <h1>
                 <a href="{{pathFor route='article'}}">Persgroep</a>
             </h1>
-            <nav>
+            <nav class="">
                 <ul>
-                    {{#if currentUser}}
-                    <li class="hvr-bounce-in">
-                        <a href="#" class="logout">Logout</a>
+<!--                    <li class="hvr-bounce-in">
+                        <a  href="{{pathFor route='category'}}">Categorieën</a>
                     </li>
                     <li class="hvr-bounce-in">
+                        <a  href="{{pathFor route='photo'}}">Foto's</a>
+                    </li>-->
+                    <li class="hvr-bounce-in">
+                        <a  href="{{pathFor route='video'}}">Video</a>
+                    </li>
+                    {{#if currentUser}}
+                    <li class="hvr-bounce-in">
                         <a href="{{pathFor route='write'}}">Schrijven</a>
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <a href="/account/{{name}}">{{name}}</a>
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <a href="#" class="logout">Logout</a>
                     </li>
                     {{else}}
                     <li class="hvr-bounce-in">
@@ -21,14 +33,8 @@
                         <a href="{{pathFor route='login'}}">Login</a>
                     </li>
                     {{/if}}
-                    <li class="hvr-bounce-in">
-                        <a  href="{{pathFor route='category'}}">Categorieën</a>
-                    </li>
-                    <li class="hvr-bounce-in">
-                        <a  href="{{pathFor route='photo'}}">Foto's</a>
-                    </li>
-                    <li class="hvr-bounce-in">
-                        <a  href="{{pathFor route='video'}}">Video</a>
+                    <li class="nav-responsive-menu">
+                        <a href="#">&#9776;</a>
                     </li>
                 </ul>
             </nav>

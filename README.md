@@ -1,9 +1,10 @@
 ##User Story
 
-Naam: Rebekka
-Leeftijd: 18
-Studie: Journalistiek
-Interesses: Film, muziek, festivals en politiek
+* Naam: Rebekka
+* Leeftijd: 18
+* Studie: Journalistiek
+* Interesses: Film, muziek, festivals en politiek
+
 
 Rebekka zit in het eerste jaar van haar studie journalistiek. Ze vind het erg leuk om artikelen te schrijven voor school maar wil dit graag ook buiten
 school om doen. Zelf heeft ze een blog en deelt dit soms met haar vrienden op facebook. Ze wilt echter meer mensen bereiken met haar artikelen en het
@@ -23,8 +24,17 @@ Feature List:
 * Homepage met artikelen
 * Login/Register
 * Likes op artikelen
+* Sorteren lijst op likes
 * Artikel schrijven
 * Accountstatus - Standard/Professional
 * Opdrachtverzoeken
 
+
+Extra Features:
+
+* Comments
+* Opdrachtverzoek aanmaken
+* Suggested content (dummy)
+* Zoekoptie / filters (dummy)
+* Categories (dummy)
 

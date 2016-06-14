@@ -3,44 +3,33 @@
         <img class="" src="img/previewimg4.jpg ">
         <h2><a href="#">Header artikel titel</a></h2>
     </div>
-    <div class="container-row">
+    <div class="container-row article-list-view">
         <section class="list-view">
             {{#each Article}}
             <article class="hvr-bounce-out">
-                <a href="#">
-                    <img src="img/previewimg1.jpg">
+                <a href="/article/{{_id}}">
+                    <img class="article-image" src="../img/previewimg1.jpg">
                     <div class="article-textblock">
-                        <h3>{{title}}</h3>
+                        <div class="article-textblock--likes">
+                            <h3>{{title}}</h3>
+                            <h3 class="article-textblock--likes-div"><img class="article-textblock--likes-icon" src="../img/like.png">{{likes}}</h3>
+                        </div>
                         <span class="article-textblock-date">{{sent}}</span>
                         <span class="article-textblock-author">{{author}}</span>
                     </div>
                 </a>
             </article>
             {{/each}}
-            <article class="hvr-bounce-out">
-                <a href="#">
-                    <img src="img/previewimg2.jpg">
-                    <div class="article-textblock">
-                        <h3>Artikel 2</h3>
-                        <span class="article-textblock-date">12-02-2016</span>
-                        <span class="article-textblock-author">Merlijn Pieterse</span>
-                    </div>
-                </a>
-            </article>
-            <article class="hvr-bounce-out">
-                <a href="#">
-                    <img src="img/previewimg3.jpg">
-                    <div class="article-textblock">
-                        <h3>Artikel 3</h3>
-                        <span class="article-textblock-date">23-01-2016</span>
-                        <span class="article-textblock-author">Niek Heizenberg</span>
-                    </div>
-                </a>
-            </article>
         </section>
         <aside>
-            {{> commission_list}}
-            {{> popular}}
+            <section class="aside-list">
+                <h2>Opdrachtverzoeken</h2>
+                {{#each Commission}}
+                <article>
+                    <a href="#">{{name}}</a>
+                </article>
+                {{/each}}
+            </section>
         </aside>
     </div>
 </template>

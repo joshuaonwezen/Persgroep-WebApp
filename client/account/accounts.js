@@ -8,22 +8,27 @@ Template.register.events({
         var points = 0;
         var id = new Date().getTime().toString();
         Accounts.createUser({
-            firstname: firstname,
-            lastname: lastname,
             email: email,
             password: password,
-            points: points,
-            id: id,
+            profile: {
+                points: points,
+                id: id,
+                firstname: firstname,
+                lastname: lastname,
+                professional: false,
+                trophy:[],
+            },
         });
         Router.go('/');
     }
 });
 
 Template.login.events({
-    'submit form': function(event){
+    'submit form': function (event) {
         event.preventDefault();
         var email = $('[name=email]').val();
         var password = $('[name=password]').val();
         Meteor.loginWithPassword(email, password);
+        Router.go('/');
     }
 });
