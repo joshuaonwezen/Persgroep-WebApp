@@ -4,13 +4,16 @@
             <article>
                 <h1>Artikel schrijven</h1>
                 <div class="write-view--title-row">
-                    <span>Titel</span><input maxlength="100" type="text" id="write-view--title">
+                    <span>Titel*</span><input maxlength="100" type="text" class="write-view--input" id="write-view--title">
                 </div>
                 <div class="write-view--textcontainer">
                     <textarea id="write-view--textarea" class="medium-editor-button-active"></textarea>
                 </div>
-                <div class="write-view--image-row">
-                    <span>Image URL</span><input type="text" id="write-view--image">
+                <div class="write-view--input-row">
+                    <span>Afbeelding URL*</span><input type="text" class="write-view--input" id="write-view--image">
+                </div>
+                <div class="write-view--input-row">
+                    <span>Video URL</span><input type="text" class="write-view--input" id="write-view--video">
                 </div>
                 <div class="write-view--submit-row">
                     <input type="checkbox" id="write-view--checkbox"><label for="write-view--checkbox" id="write-view--checkbox-label">Inzenden naar redactie?</label>

@@ -7,21 +7,21 @@ Meteor.publish('Commission', function () {
         Commission.insert({
             _id: "commission2",
             name: "Artikel over IS",
-            image: "img/is.png",
+            image: "img/is.jpg",
             reward: "90 euro",
             takenBy: "",
         })
         Commission.insert({
             _id: "commission1",
             name: "Filmpje over Lowlands festival",
-            image: "img/lowlands.png",
+            image: "img/lowlands.jpg",
             reward: "300 euro + ticket",
             takenBy: "",
         })
         Commission.insert({
             _id: "commission3",
             name: "Artikel over EK Voetbal 2016",
-            image: "img/ekvoetbal.png",
+            image: "img/ekvoetbal.jpg",
             reward: "230 euro",
             takenBy: "",
         })

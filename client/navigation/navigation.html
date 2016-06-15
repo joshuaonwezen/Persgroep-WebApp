@@ -6,14 +6,21 @@
             </h1>
             <nav class="">
                 <ul>
-<!--                    <li class="hvr-bounce-in">
-                        <a  href="{{pathFor route='category'}}">Categorieën</a>
-                    </li>
+<!--                    
                     <li class="hvr-bounce-in">
                         <a  href="{{pathFor route='photo'}}">Foto's</a>
                     </li>-->
-                    <li class="hvr-bounce-in">
+<!--                    <li class="hvr-bounce-in">
                         <a  href="{{pathFor route='video'}}">Video</a>
+                    </li>-->
+                    <li class="nav-responsive-menu">
+                        <a href="#">&#9776;</a>
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <input type="text" placeholder="Zoeken">
+                    </li>
+                    <li class="hvr-bounce-in">
+                        <a  href="{{pathFor route='category'}}">Categorieën</a>
                     </li>
                     {{#if currentUser}}
                     <li class="hvr-bounce-in">
@@ -33,9 +40,6 @@
                         <a href="{{pathFor route='login'}}">Login</a>
                     </li>
                     {{/if}}
-                    <li class="nav-responsive-menu">
-                        <a href="#">&#9776;</a>
-                    </li>
                 </ul>
             </nav>
         </div>

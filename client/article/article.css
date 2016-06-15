@@ -18,6 +18,9 @@ aside{
     margin-top:0;
     background-color:#FFF;
     flex:40%;
+    
+    border-bottom: 1px solid;
+    padding: 1em;
 }
 .list-view > article:hover{
     opacity:0.8;
@@ -136,9 +139,14 @@ a:hover{
         min-height:20em;
     }
     .article-list-view{
-        flex-direction:row;
+        flex-direction:row-reverse;
     }
     aside{
         display:block;
+    }
+    
+    list-view > article{
+        border-bottom: 0px solid;
+        padding: 0;
     }
 }

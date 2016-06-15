@@ -8,7 +8,7 @@ Template.write_article.rendered = function () {
     mediumEdit = new MediumEditor('#write-view--textarea', {
         relativeContainer: $('#write-view--textarea'),
         placeholder: {
-            text: 'Schrijf hier uw artikel'
+            text: 'Schrijf hier uw artikel*'
         }
     });
     
@@ -24,8 +24,11 @@ Template.write_article.events({
         var contentTextarea = $('div[id*="medium-editor"]').html();
         var contentTitle = $('#write-view--title').val();
         var contentImage = $('#write-view--image').val();
+        var contentVideo = $('#write-view--video').val();
+        var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+        var regex = new RegExp(expression);
 
-        if (contentTextarea == '' || contentTitle == '') {
+        if (contentTextarea == '' || contentTitle == '' || contentImage.match(regex) == false)  {
             //show error
         } else {
             //getting formatted date
@@ -44,7 +47,7 @@ Template.write_article.events({
 
             today = mm + '/' + dd + '/' + yyyy;
 
-            Meteor.call('addArticle', contentTitle, contentTextarea, Meteor.user().profile.firstname + ' ' + Meteor.user().profile.lastname, today, Meteor.user().profile.id, contentImage, 'article');
+            Meteor.call('addArticle', contentTitle, contentTextarea, Meteor.user().profile.firstname + ' ' + Meteor.user().profile.lastname, today, Meteor.user().profile.id, contentImage, contentVideo);
             
             Router.go('/');
             

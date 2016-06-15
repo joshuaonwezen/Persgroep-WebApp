@@ -1,9 +1,34 @@
 .account--content{
     display:flex;
     flex-direction:column;
-    height: 939px;
 }
 .account--content > article{
     display:flex;
     flex-direction:column;
+    
+}
+.account-article--list-container{
+    display:flex;
+}
+.account-article--list-container > h2{
+    margin:auto;
+}
+.account-article--list-container > div{
+    display:flex;
+    flex-direction:column;
+    padding:2em;
+}
+.account-article--delete{
+    font-family: 'Bree Serif', serif;
+    width: 6em;
+    margin-left:0.5em;
+
+    background-color: #333;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333;
+    border-radius:5px;
+    color:#FFF;
 }

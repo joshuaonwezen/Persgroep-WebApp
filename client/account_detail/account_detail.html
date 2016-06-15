@@ -3,26 +3,37 @@
         <label>{{name}}</label>
         <label>{{experience}}</label>
         <article class="account-commission--list">
+            <h2>Opdrachtverzoeken</h2>
+            <article class="account-article--list-container">
             {{#each Commission}}
-            <label>{{name}}</label>
-            <img src="{{image}}">
+            <div>
+                <label>{{name}}</label>
+                <img src="{{image}}">
+            </div>
             {{/each}}
+            </article>
         </article>
         <article class="account-article--list">
+            <h2>Artikelen</h2>
+            <article class="account-article--list-container">
             {{#each Article}}
             <div>
                 <label>{{title}}</label>
-                <button class="account-article--delete">X</button>
+                <button class="account-article--delete">Verwijder</button>
             </div>
             {{/each}}
+            </article>
         </article>
         <article class="account-trophy--list">
+            <h2>Trofeeën</h2>
+            <article class="account-article--list-container">
             {{#each Trophy}}
             <div>
                 <label>{{name}}</label>
                 <img src="{{image}}">
             </div>
             {{/each}}
+            </article>
         </article>
     </section>
 </template>

@@ -9,12 +9,12 @@ Template.article.helpers({
 
 Template.article.rendered = function () {
 
-    $('.article-image').each(function(){
-    if($(this).src == undefined){
-        $(this).attr("src", 'img/previewimg1.jpg');
-    }
-        
-    });
+//    $('.article-image').each(function(){
+//    if($(this).src == undefined){
+//        $(this).attr("src", 'img/previewimg1.jpg');
+//    }
+//        
+//    });
     
 }
 

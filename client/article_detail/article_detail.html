@@ -3,15 +3,20 @@
         <article>
             <h1>{{title}}</h1>
             <span class="article--detail--author">door {{author}}</span>
-            <img src="{{image}}">
-            
+            {{#if video}}
+                <iframe src="{{video}}" height="380"></iframe>
+            {{else}}
+                <img src="{{image}}">
+            {{/if}}
             <div class="article--detail--content--target">
 
             </div>
             <div>
                  <img class="article-textblock--likes-icon" src="../img/like.png">
                  {{likes}} 
+                 {{#if currentUser}}
                  <button class="article-detail--like">Like</button>
+                 {{/if}}
                  <img class="social-media-icon" src="../img/socialmedia.png">
             </div>
 
