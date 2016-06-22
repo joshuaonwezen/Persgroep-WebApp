@@ -41,7 +41,7 @@ Extra Features:
 
 
 
-Hieronder mijn performance bevindingen. Alles laad snel en wordt geoptimized. Zo zie je maar 22 requests (veel van meteor zelf) en zelfs minder dan 1mb loading.
+Hieronder mijn performance bevindingen. Alles laad snel en wordt geoptimized. Zo zie je maar 15 requests (veel van meteor zelf) en zelfs minder dan 1mb loading.
 
 
 
