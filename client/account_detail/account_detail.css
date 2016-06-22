@@ -94,6 +94,7 @@ a{
 .account-trophy--list img{
     min-width:30%;
     max-width:30%;
+    padding-bottom: 30px;
 }
 .account-commission--list img{
     width: 160px;
