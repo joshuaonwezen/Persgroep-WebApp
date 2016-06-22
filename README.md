@@ -45,7 +45,7 @@ Hieronder mijn performance bevindingen. Alles laad snel en wordt geoptimized. Zo
 
 
 
-![alt tag](readme_images/network.png
+![alt tag](readme_images/network.png)
 
 
 
