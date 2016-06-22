@@ -39,7 +39,14 @@ Extra Features:
 * Trophy's
 
 
+Hieronder mijn performance bevindingen. Alles laad snel en wordt geoptimized. Zo zie je maar 22 requests (veel van meteor zelf) en zelfs minder dan 1mb loading.
 ![alt tag](readme_images/network.png)
 
 
+Hieronder mijn performance bevindingen uit kadira. Naar de mb's moet je niet echt kijken aangezien mijn sessie als host uiteraard het gemiddelde mb's ver omhoog trekt.
+Het was echter wel erg interessant om te zien welke collections en pagina's de meeste cpu power en mb's vreten.
 ![alt tag](readme_images/kadira.png)
+
+
+Mijn planning zoals hij was en geupdate is elke week. Verder werktte ik met features uit mijn procesboek.
+![alt tag](readme_images/trello.png)
