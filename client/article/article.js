@@ -6,7 +6,9 @@ Template.article.helpers({
         return Commission.find({});
     },
     AccountStatus: function () {
-        return Meteor.user().profile.professional;
+        if (Meteor.user()) {
+            return Meteor.user().profile.professional;
+        }
     },
 })
 
