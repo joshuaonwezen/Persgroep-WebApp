@@ -11,16 +11,16 @@ Template.write_article.rendered = function () {
             text: 'Schrijf hier uw artikel*'
         }
     });
-    
 
-    
+
+
 };
 
 Template.write_article.events({
     'submit form': function (event) {
         event.preventDefault();
 
-        
+
         var contentTextarea = $('div[id*="medium-editor"]').html();
         var contentTitle = $('#write-view--title').val();
         var contentImage = $('#write-view--image').val();
@@ -28,9 +28,13 @@ Template.write_article.events({
         var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
         var regex = new RegExp(expression);
 
-        if (contentTextarea == '' || contentTitle == '' || contentImage.match(regex) == false)  {
+        if (contentTextarea == '' || contentTitle == '' || contentImage.match(regex) == false) {
             //show error
+            $('.error-message').remove();
+            $('.write-view--submit-row').append('<label class="error-message">U heeft niet alle velden correct ingevoerd.</label>')
         } else {
+            $('.error-message').remove();
+
             //getting formatted date
             var today = new Date();
             var dd = today.getDate();
@@ -47,13 +51,24 @@ Template.write_article.events({
 
             today = mm + '/' + dd + '/' + yyyy;
 
-            Meteor.call('addArticle', contentTitle, contentTextarea, Meteor.user().profile.firstname + ' ' + Meteor.user().profile.lastname, today, Meteor.user().profile.id, contentImage, contentVideo);
-            
-            Router.go('/');
-            
-            if(Meteor.user().profile.trophy.indexOf('trophy1') == -1){
+            var userPoints = Meteor.user().profile.points;
+            var updatedPoints = userPoints + 5;
+            if (updatedPoints > 200 && Meteor.user().profile.trophy.indexOf('trophy3') == -1) {
                 setTimeout(function () {
                     Modal.show('trophy_popup');
+                }, 3000);
+                Meteor.call('updateAccountStatus', Meteor.user().profile.id);
+                Meteor.call('addTrophy', Meteor.user().profile.id, 'trophy3');
+            }
+            Meteor.call('updateUserPoints', Meteor.user().profile.id, updatedPoints);
+
+            Meteor.call('addArticle', contentTitle, contentTextarea, Meteor.user().profile.firstname + ' ' + Meteor.user().profile.lastname, today, Meteor.user().profile.id, contentImage, contentVideo);
+
+            Router.go('/');
+
+            if (Meteor.user().profile.trophy.indexOf('trophy1') == -1) {
+                setTimeout(function () {
+//                    Modal.show('trophy_popup');
                 }, 3000);
                 Meteor.call('addTrophy', Meteor.user().profile.id, 'trophy1');
             }

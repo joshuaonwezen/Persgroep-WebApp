@@ -13,17 +13,16 @@ Template.navigation.events({
         Meteor.logout();
         Router.go('/');
     },
-    'click .nav-responsive-menu': function(event){
+    'mouseenter .nav-responsive-menu': function(event){
         event.preventDefault();
-        if ($('nav').hasClass('collapsed')) {
-            $('nav').removeClass('collapsed');
-            $('li:not(".nav-responsive-menu")').hide();
-        } else {
-            $('nav').addClass('collapsed');
-            $('li').show();
-        }
-        
-    }
+        $('nav').addClass('collapsed');
+        $('li').show();
+    },
+    'mouseleave .navigation': function (event) {
+        event.preventDefault();
+        $('nav').removeClass('collapsed');
+        $('li:not(".nav-responsive-menu")').hide();
+    },
     
     
 });

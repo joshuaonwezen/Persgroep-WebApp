@@ -3,11 +3,11 @@ Template.account_detail.helpers ({
         return Article.find({userId: Meteor.user().profile.id});
     },
     Commission: function () {
-        return Commission.find({});
+        return Commission.find({takenBy: Meteor.user().profile.id});
     },
     Trophy: function () {
         return Trophy.find({awardedTo: Meteor.user().profile.id});
-    }
+    },
 })
 
 Template.account_detail.rendered = function(){

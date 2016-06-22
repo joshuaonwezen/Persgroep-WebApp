@@ -1,27 +1,19 @@
 Template.article.helpers({
     Article: function () {
-        return Article.find({}, {sort: {likes:-1}});
+        return Article.find({}, {sort: {likes:-1}, limit:20});
     },
     Commission: function () {
         return Commission.find({});
-    }
+    },
+    AccountStatus: function () {
+        return Meteor.user().profile.professional;
+    },
 })
 
 Template.article.rendered = function () {
-
-//    $('.article-image').each(function(){
-//    if($(this).src == undefined){
-//        $(this).attr("src", 'img/previewimg1.jpg');
-//    }
-//        
-//    });
     
 }
 
 Template.article.events({
-        
-    'click .aside-list a': function(){
-        Modal.show('trophy_popup');
-    }
-    
+
 })

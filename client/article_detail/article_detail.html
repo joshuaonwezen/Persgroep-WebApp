@@ -16,10 +16,33 @@
                  {{likes}} 
                  {{#if currentUser}}
                  <button class="article-detail--like">Like</button>
+                 <button class="article-detail--dislike">Dislike</button>
                  {{/if}}
                  <img class="social-media-icon" src="../img/socialmedia.png">
             </div>
-
+            <div class="article-detail--comment-row">
+                <form>
+                    <h1>Comments</h1><br>
+                    <input type="text" id="article-detail--comment-text">
+                    <input type="submit" id="article-detail--comment-submit" value="Plaatsen">
+                </form>
+                {{#if comments}}
+                {{#each comments}}
+                <div class="article-detail--comment">
+                    <div class="article-detail--comment-block">
+                        <span>{{this.[0]}}</span><span>door {{this.[1]}}</span>
+                    </div>
+                    <div class="article-detail--comment-posted">
+                        {{this.[2]}}
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                    <div class="article-detail--comment-block">
+                        <span>Er zijn nog geen comments.</span>
+                    </div>
+                {{/if}}
+            </div>
         </article>
     </section>
 </template>

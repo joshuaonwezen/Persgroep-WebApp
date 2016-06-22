@@ -16,4 +16,15 @@ Meteor.startup(function () {
         "vcf": "text/x-vcard"
     }
   });
+  
+  Meteor.setInterval(function(){
+      
+  }, 500)
 });
+
+
+//Meteor.users.after.update(function (userId, doc, fieldNames, modifier) {
+//  if (doc.points > 200) {
+////        Meteor.users.update({"profile.id" : doc.id}, {$set: {"profile.professional" : true}});
+//  }
+//});

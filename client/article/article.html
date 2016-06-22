@@ -4,16 +4,20 @@
         <h2><a href="#">Header artikel titel</a></h2>
     </div>
     <div class="container-row article-list-view">
+        {{#if AccountStatus}}
         <aside>
             <section class="aside-list">
                 <h2>Opdrachtverzoeken</h2>
                 {{#each Commission}}
+                {{#if takenBy = ''}}
                 <article>
-                    <a href="#">{{name}}</a>
+                    <a href="/commission/{{_id}}">{{name}}</a>
                 </article>
+                {{/if}}
                 {{/each}}
             </section>
         </aside>
+        {{/if}}
         <section class="list-view">
             {{#each Article}}
             <article class="hvr-bounce-out">

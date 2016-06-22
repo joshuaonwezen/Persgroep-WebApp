@@ -1,28 +1,85 @@
-Template.article_detail.helpers ({
+Template.article_detail.helpers({
     Article: function () {
         return Article.find({_id: id});
     },
 })
 
-Template.article_detail.rendered = function(){
+Template.article_detail.rendered = function () {
     $('.article--detail--content--target').append(articleObj.content);
     $('.article-detail--like').hide();
+    $('.article-detail--dislike').hide();
 
-    if(articleObj.likedBy.indexOf(Meteor.user().profile.id) == -1){
+    if (articleObj.likedBy.indexOf(Meteor.user().profile.id) == -1) {
         $('.article-detail--like').show();
     }
+    if (articleObj.dislikedBy.indexOf(Meteor.user().profile.id) == -1) {
+        $('.article-detail--dislike').show();
+    }
+    console.log(articleObj.comments);
 }
 
 Template.article_detail.events({
-   'click .article-detail--like': function(event){
-       var articleLikes = articleObj.likes;
-       var updatedLikes = articleLikes + 1;
-       Meteor.call('updateArticleLikes', articleObj.id, updatedLikes,  Meteor.user().profile.id);
-       $('.article-detail--like').hide();
-       
-       var userPoints = Meteor.user().profile.points;
-       var updatedPoints = userPoints + 5;
-       console.log(userPoints, updatedPoints);
-       Meteor.call('updateUserPoints', Meteor.user().profile.id, updatedPoints);
-   }    
+    'click .article-detail--like': function (event) {
+        var articleLikes = articleObj.likes;
+        if (articleObj.dislikedBy.indexOf(Meteor.user().profile.id) != -1) {
+            var updatedLikes = articleLikes + 2;
+        }else{
+            updatedLikes = articleLikes + 1;
+        }
+        
+        Meteor.call('removeArticleUserDislikes', articleObj.id, Meteor.user().profile.id);
+        Meteor.call('updateArticleLikes', articleObj.id, updatedLikes, Meteor.user().profile.id);
+        $('.article-detail--like').hide();
+        $('.article-detail--dislike').show();
+
+        var userPoints = Meteor.user().profile.points;
+        var updatedPoints = userPoints + 5;
+        Meteor.call('updateUserPoints', Meteor.user().profile.id, updatedPoints);
+    },
+    'click .article-detail--dislike': function (event) {
+        var articleLikes = articleObj.likes;
+        if (articleObj.likedBy.indexOf(Meteor.user().profile.id) != -1) {
+            var updatedLikes = articleLikes - 2;
+        }else{
+            updatedLikes = articleLikes - 1;
+        }
+        
+        Meteor.call('removeArticleUserLikes', articleObj.id, Meteor.user().profile.id);
+        Meteor.call('updateArticleDislikes', articleObj.id, updatedLikes, Meteor.user().profile.id);
+
+        $('.article-detail--dislike').hide();
+        $('.article-detail--like').show();
+
+    },
+    'submit form': function (event) {
+        event.preventDefault();
+        var comment = $('#article-detail--comment-text').val();
+        if (comment != '') {
+            $('.error-message').remove();
+            //getting formatted date
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+
+            today = mm + '/' + dd + '/' + yyyy;
+
+            Meteor.call('addArticleComment', articleObj.id, comment, Meteor.user().profile.firstname + ' ' + Meteor.user().profile.lastname, today);
+
+            var userPoints = Meteor.user().profile.points;
+            var updatedPoints = userPoints + 5;
+            Meteor.call('updateUserPoints', Meteor.user().profile.id, updatedPoints);
+        }else{
+            $('.error-message').remove();
+            $('.article-detail--comment-row > form').append('<label class="error-message">U heeft niet alle velden correct ingevoerd.</label>')
+        }
+    }
 });

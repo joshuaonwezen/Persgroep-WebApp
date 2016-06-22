@@ -1,7 +1,8 @@
 Router.configure({
     layoutTemplate: 'index',
+    loadingTemplate: 'loading',
     waitOn: function () {
-        return [Meteor.subscribe('Article')];
+        return [Meteor.subscribe('Article'), Meteor.subscribe('Commission')];
     }
 });
 
@@ -13,6 +14,21 @@ Router.route('/', {
     action: function () {
         this.render('article');
     },
+});
+
+Router.route('/commission/:_id', {
+    name: "commission",
+    waitOn: function () {
+        return [Meteor.subscribe('Commission')]
+    },
+    action: function () {
+        this.render('commission', {
+            data: function () {
+                var id = this.params._id
+                return commissionObj = Commission.findOne({_id: id});
+            }
+        });
+    }
 });
 
 Router.route('/register', {

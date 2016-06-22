@@ -23,7 +23,7 @@ Feature List:
 
 * Homepage met artikelen
 * Login/Register
-* Likes op artikelen
+* Likes/Dislikes op artikelen
 * Sorteren lijst op likes
 * Artikel schrijven
 * Accountstatus - Standard/Professional
@@ -33,8 +33,8 @@ Feature List:
 Extra Features:
 
 * Comments
-* Opdrachtverzoek aanmaken
-* Suggested content (dummy)
 * Zoekoptie / filters (dummy)
 * Categories (dummy)
+* Social media buttons (dummy)
+* Trophy's
 

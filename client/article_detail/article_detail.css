@@ -5,7 +5,7 @@
     color: #000;
     height:939px;
 }*/
-.article-detail--like{
+.article-detail--like, .article-detail--dislike{
     font-family: 'Bree Serif', serif;
     width: 5em;
     margin-left:0.5em;
@@ -31,7 +31,7 @@
 .article-detail--content > article > img, .article-detail--content > article > iframe{
     margin-bottom: 2em;
 }
-.article-detail--content > article > h1{
+.article-detail--content h1{
     font-family: 'Bree Serif', serif;
     color:#000;
     padding:1em;
@@ -44,4 +44,48 @@
 .social-media-icon{
     width:50%;
     float:right;
+}
+#article-detail--comment-submit{
+    font-family: 'Bree Serif', serif;
+    width: 5em;
+    margin-left:0.5em;
+
+    background-color: #333;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333;
+    border-radius:5px;
+    color:#FFF;
+}
+.article-detail--comment-block{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:0.5em;
+    margin-top:0.5em;
+}
+
+#article-detail--comment-text {
+    padding: 3px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+    width:50%;
+}
+#article-detail--comment-text:focus,
+#article-detail--comment-text.focus{
+    border: solid 1px #FFF;
+    box-shadow: 0 0 5px 2px #969696;
+}
+
+.article-detail--comment-block > span{
+    float:right;
+}
+.article-detail--comment-posted{
+    float:right;
+    font-style:italic;
+}
+.article-detail--comment{
+    margin:10px;
+    padding:10px;
 }

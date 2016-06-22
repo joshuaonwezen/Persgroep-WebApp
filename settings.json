@@ -1,5 +1,8 @@
 {
-  "public": {
-
-  }
+    "public": {
+    },
+    "kadira": {
+        "appId": "pHZodxgFzePKYMkKn",
+        "appSecret": "f7e41603-ce38-43ab-8ebf-8fc2d0670ea1"
+    }
 }

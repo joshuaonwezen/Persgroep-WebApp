@@ -145,7 +145,7 @@ a:hover{
         display:block;
     }
     
-    list-view > article{
+    .list-view > article{
         border-bottom: 0px solid;
         padding: 0;
     }

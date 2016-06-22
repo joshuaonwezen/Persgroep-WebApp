@@ -1,0 +1,31 @@
+.commission-block{
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    padding: 1em;
+    max-width: 700px;
+    margin: auto;
+}
+.commission-block > h1{
+    font-family: 'Bree Serif', serif;
+    color: #000;
+    padding: 1em;
+    padding-left: 0;
+}
+.commission-block > img{
+    margin-bottom:10px;
+}
+.commission-accept{
+    font-family: 'Bree Serif', serif;
+    width: 7em;
+    margin-left:0.5em;
+
+    background-color: #333;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333;
+    border-radius:5px;
+    color:#FFF;
+}

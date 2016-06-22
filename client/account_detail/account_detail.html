@@ -1,38 +1,53 @@
 <template name="account_detail"> 
     <section class="account--content">
-        <label>{{name}}</label>
-        <label>{{experience}}</label>
         <article class="account-commission--list">
-            <h2>Opdrachtverzoeken</h2>
+            <h2>Geaccepteerde opdrachtverzoeken</h2>
             <article class="account-article--list-container">
-            {{#each Commission}}
-            <div>
-                <label>{{name}}</label>
-                <img src="{{image}}">
-            </div>
-            {{/each}}
+            {{#if Commission}}
+                {{#each Commission}}
+                    <div>
+                        <a href="/commission/{{_id}}">
+                            <label>{{name}}</label><br>
+                            <img src="../{{image}}">
+                        </a>
+                    </div>
+                {{/each}}
+            {{else}}
+                <label>Je hebt nog geen opdrachtverzoeken geaccepteerd.</label>
+            {{/if}}
             </article>
         </article>
         <article class="account-article--list">
             <h2>Artikelen</h2>
             <article class="account-article--list-container">
-            {{#each Article}}
-            <div>
-                <label>{{title}}</label>
-                <button class="account-article--delete">Verwijder</button>
-            </div>
-            {{/each}}
+            {{#if Article}}
+                {{#each Article}}
+                    <div>
+                        <a href="/article/{{_id}}">
+                            <label>{{title}}</label>
+                            <label class="account-article--sent">{{sent}}</label>
+                        </a>
+                        <button class="account-article--delete">Verwijder</button>
+                    </div>
+                {{/each}}
+            {{else}}
+                <label>Je hebt nog geen artikelen geschreven.</label>
+            {{/if}}
             </article>
         </article>
         <article class="account-trophy--list">
             <h2>Trofeeën</h2>
             <article class="account-article--list-container">
-            {{#each Trophy}}
-            <div>
-                <label>{{name}}</label>
-                <img src="{{image}}">
-            </div>
-            {{/each}}
+            {{#if Trophy}}
+                {{#each Trophy}}
+                    <div>
+                        <label>{{name}}</label>
+                        <img src="../{{image}}">
+                    </div>
+                {{/each}}
+            {{else}}
+                <label>Je hebt nog geen trofeeën verdient.</label>
+            {{/if}}
             </article>
         </article>
     </section>

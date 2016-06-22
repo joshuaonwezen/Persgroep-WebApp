@@ -1,0 +1,15 @@
+<template name="commission">
+    <section>
+        <article class="commission-block">
+            <h1 class="commission-title">{{name}}</h1>
+            <img src="../{{image}}">
+            <label>{{description}}</label>
+            <label class="commission-reward">Beloning -  {{reward}}</label>
+            {{#if takenBy}}
+            <label>Deze opdracht is geaccepteerd.</label>
+            {{else}}
+            <button class="commission-accept">Accepteren</button>
+            {{/if}}
+        </article>
+    </section>
+</template>
