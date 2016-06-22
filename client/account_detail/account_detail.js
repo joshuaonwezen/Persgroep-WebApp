@@ -14,9 +14,14 @@ Template.account_detail.rendered = function(){
 }
 
 Template.account_detail.events({
+    //Delete specific items
     'click .account-article--delete': function(){
         var articleId = $(this)[0].id;
         Meteor.call('deleteArticle', articleId);
+    },
+    'click .account-commission--delete': function(){
+        var commissionId = $(this)[0]._id;
+        Meteor.call('deleteCommission', commissionId);
     }
     
 })

@@ -38,3 +38,8 @@ Extra Features:
 * Social media buttons (dummy)
 * Trophy's
 
+
+![alt tag](readme_images/network.png)
+
+
+![alt tag](readme_images/kadira.png)

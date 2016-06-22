@@ -5,9 +5,9 @@ Template.commission.helpers({
 })
 
 Template.commission.events({
+    //Accept commission
     'click .commission-accept': function(){
         Meteor.call('acceptCommission', commissionObj._id, Meteor.user().profile.id);
-        console.log(commissionObj._id, Meteor.user().profile.id);
         Router.go('/');
     }
     

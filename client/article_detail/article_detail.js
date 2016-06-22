@@ -19,19 +19,23 @@ Template.article_detail.rendered = function () {
 }
 
 Template.article_detail.events({
+    //Like
     'click .article-detail--like': function (event) {
         var articleLikes = articleObj.likes;
+        //Add correct points based on if disliked or not
         if (articleObj.dislikedBy.indexOf(Meteor.user().profile.id) != -1) {
             var updatedLikes = articleLikes + 2;
         }else{
             updatedLikes = articleLikes + 1;
         }
         
+        //Remove user from dislikes if disliked
         Meteor.call('removeArticleUserDislikes', articleObj.id, Meteor.user().profile.id);
         Meteor.call('updateArticleLikes', articleObj.id, updatedLikes, Meteor.user().profile.id);
         $('.article-detail--like').hide();
         $('.article-detail--dislike').show();
 
+        //Add experience to user account
         var userPoints = Meteor.user().profile.points;
         var updatedPoints = userPoints + 5;
         Meteor.call('updateUserPoints', Meteor.user().profile.id, updatedPoints);
@@ -71,12 +75,14 @@ Template.article_detail.events({
             }
 
             today = mm + '/' + dd + '/' + yyyy;
-
+            
+            //Add comment
             Meteor.call('addArticleComment', articleObj.id, comment, Meteor.user().profile.firstname + ' ' + Meteor.user().profile.lastname, today);
 
             var userPoints = Meteor.user().profile.points;
             var updatedPoints = userPoints + 5;
             Meteor.call('updateUserPoints', Meteor.user().profile.id, updatedPoints);
+            $('#article-detail--comment-text').val('');
         }else{
             $('.error-message').remove();
             $('.article-detail--comment-row > form').append('<label class="error-message">U heeft niet alle velden correct ingevoerd.</label>')

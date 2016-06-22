@@ -41,6 +41,9 @@ footer{
 /*    position: relative;
     clear:both;*/
     height:5em;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display:flex;
     
     width: 100%;
@@ -81,17 +84,4 @@ a:focus{
 
 .error-message{
     color:#F00
-}
-
-
-
-
-
-@media all and (min-width:800px){
-    section{
-/*        margin-left:2em;
-        margin-right:2em;
-        margin: 2em;
-        border: 2px solid #551010;*/
-    }
 }

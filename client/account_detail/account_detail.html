@@ -3,24 +3,25 @@
         <article class="account-commission--list">
             <h2>Geaccepteerde opdrachtverzoeken</h2>
             <article class="account-article--list-container">
-            {{#if Commission}}
+            {{#if Commission.count}}
                 {{#each Commission}}
                     <div>
                         <a href="/commission/{{_id}}">
                             <label>{{name}}</label><br>
                             <img src="../{{image}}">
                         </a>
+                        <button class="account-commission--delete">Verwijder</button>
                     </div>
                 {{/each}}
             {{else}}
-                <label>Je hebt nog geen opdrachtverzoeken geaccepteerd.</label>
+                <label class="account--content--empty">Je hebt nog geen opdrachtverzoeken geaccepteerd.</label>
             {{/if}}
             </article>
         </article>
         <article class="account-article--list">
             <h2>Artikelen</h2>
             <article class="account-article--list-container">
-            {{#if Article}}
+            {{#if Article.count}}
                 {{#each Article}}
                     <div>
                         <a href="/article/{{_id}}">
@@ -31,14 +32,14 @@
                     </div>
                 {{/each}}
             {{else}}
-                <label>Je hebt nog geen artikelen geschreven.</label>
+                <label class="account--content--empty">Je hebt nog geen artikelen geschreven.</label>
             {{/if}}
             </article>
         </article>
         <article class="account-trophy--list">
             <h2>Trofeeën</h2>
             <article class="account-article--list-container">
-            {{#if Trophy}}
+            {{#if Trophy.count}}
                 {{#each Trophy}}
                     <div>
                         <label>{{name}}</label>
@@ -46,7 +47,7 @@
                     </div>
                 {{/each}}
             {{else}}
-                <label>Je hebt nog geen trofeeën verdient.</label>
+                <label class="account--content--empty">Je hebt nog geen trofeeën verdient.</label>
             {{/if}}
             </article>
         </article>

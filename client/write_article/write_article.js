@@ -25,14 +25,17 @@ Template.write_article.events({
         var contentTitle = $('#write-view--title').val();
         var contentImage = $('#write-view--image').val();
         var contentVideo = $('#write-view--video').val();
-        var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-        var regex = new RegExp(expression);
-
-        if (contentTextarea == '' || contentTitle == '' || contentImage.match(regex) == false) {
+        //check URL
+        function isValidURL(str) {
+           var a  = document.createElement('a');
+           a.href = str;
+           return (a.host && a.host != window.location.host);
+        }
+        if (contentTextarea == '' || contentTitle == '' || isValidURL(contentImage) == false) {
             //show error
             $('.error-message').remove();
             $('.write-view--submit-row').append('<label class="error-message">U heeft niet alle velden correct ingevoerd.</label>')
-        } else {
+        } else if(contentVideo == '' || isValidURL(contentVideo)){
             $('.error-message').remove();
 
             //getting formatted date
@@ -52,7 +55,7 @@ Template.write_article.events({
             today = mm + '/' + dd + '/' + yyyy;
 
             var userPoints = Meteor.user().profile.points;
-            var updatedPoints = userPoints + 5;
+            var updatedPoints = userPoints + 50;
             if (updatedPoints > 200 && Meteor.user().profile.trophy.indexOf('trophy3') == -1) {
                 setTimeout(function () {
                     Modal.show('trophy_popup');

@@ -2,8 +2,15 @@
     margin-bottom:0.5em;
 }
 .write-view > article{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+        -ms-flex-direction:column;
+            flex-direction:column;
     color:#FFF;
     padding:1em;
     min-height:600px;
@@ -25,8 +32,15 @@ div[id*="medium-editor"]{
 .write-view--upload{
 }
 .write-view--title-row{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+        -ms-flex-direction:column;
+            flex-direction:column;
 
     margin-bottom:1em;
     max-width:700px;
@@ -40,8 +54,15 @@ div[id*="medium-editor"]{
     margin-bottom: 5em;
 }
 .write-view--input-row{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:column;
+        -ms-flex-direction:column;
+            flex-direction:column;
 
     margin-bottom:1em;
     max-width:700px;
@@ -75,7 +96,8 @@ div[id*="medium-editor"]{
 .write-view--title-row input[type="text"], .write-view--input-row input[type="text"] {
     padding: 10px;
     border: solid 1px #dcdcdc;
-    transition: box-shadow 0.3s, border 0.3s;
+    -webkit-transition: box-shadow 0.3s, border 0.3s;
+            transition: box-shadow 0.3s, border 0.3s;
 }
 .write-view--title-row input[type="text"]:focus,
 .write-view--title-row input[type="text"].focus,
