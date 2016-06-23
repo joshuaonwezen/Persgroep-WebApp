@@ -39,8 +39,37 @@ Extra Features:
 * Trophy's
 
 
+##Real-Time Web
+Wat komt erin terug?
+
+* Experience structuur, je krijgt opdrachtverzoeken en trophy's wanneer je genoeg punten behaald hebt. 
+* Likes/Dislikes (sorting)
+* Likes/Dislikes denk aan reddit.com waar upvotes/downvotes minder tellen na een bepaald aantal en je periodiek downvotes krijgt zodat het artikel uit de top verdwijnt wanneer er genoeg tijd voorbij gaat.
 
 
+##Web-App From Scratch
+
+Routing is gedaan op basis van een single-page app. Cerder is er geen API nodig maar is er een heel CMS systeem gebouwd rond MongoDB.
+
+
+
+##CSS to the Rescue
+
+Responsive app (navigation, list view, detail view), animaties met scaling wanneer hovered. 
+Verder een text editor.
+
+
+
+##Browser Technologies
+
+Aangezien mijn app in meteor is gebouwd is het niet voor hele oude browsers beschikbaar en ook niet zonder JS. Zo heeft opera mini hier moeite mee.
+Verder is mijn app goed opgebouwd zodat alle CSS en HTML werkend is in oude browsers die bijv. geen flex ondersteunen.
+
+Alle JS implementaties werken zonder verdere moeite. Texteditor heeft geen fallback aangezien het een enhancement is op de textarea.
+
+
+
+##Performance Matters
 Hieronder mijn performance bevindingen. Alles laad snel en wordt geoptimized. Zo zie je maar 15 requests (veel van meteor zelf) en zelfs minder dan 1mb loading.
 
 
@@ -60,6 +89,8 @@ Het was echter wel erg interessant om te zien welke collections en pagina's de m
 
 
 
+
+##Planning
 
 
 Mijn planning zoals hij was en geupdate is elke week. Verder werktte ik met features uit mijn procesboek.
