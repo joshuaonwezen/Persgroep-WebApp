@@ -23,8 +23,11 @@
             <div class="article-detail--comment-row">
                 <form>
                     <h1>Comments</h1><br>
+                                        {{#if currentUser}}
+
                     <input type="text" id="article-detail--comment-text">
                     <input type="submit" id="article-detail--comment-submit" value="Plaatsen">
+                    {{/if}}
                 </form>
                 {{#if comments}}
                 {{#each comments}}
