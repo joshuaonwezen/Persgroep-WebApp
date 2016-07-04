@@ -8,13 +8,16 @@
         <aside>
             <section class="aside-list">
                 <h2>Opdrachtverzoeken</h2>
+                <ul>
                 {{#each Commission}}
                 {{#if takenBy = ''}}
-                <article>
+                
+                <li>
                     <a href="/commission/{{_id}}">{{name}}</a>
-                </article>
+                </li>
                 {{/if}}
                 {{/each}}
+                </ul>
             </section>
         </aside>
         {{/if}}

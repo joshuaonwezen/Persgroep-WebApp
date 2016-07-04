@@ -16,12 +16,12 @@ Template.navigation.events({
     'mouseenter .nav-responsive-menu': function(event){
         event.preventDefault();
         $('nav').addClass('collapsed');
-        $('li').show();
+        $('nav li').show();
     },
     'mouseleave .navigation': function (event) {
         event.preventDefault();
         $('nav').removeClass('collapsed');
-        $('li:not(".nav-responsive-menu")').hide();
+        $('nav li:not(".nav-responsive-menu")').hide();
     },
     
     

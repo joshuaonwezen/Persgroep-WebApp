@@ -25,7 +25,8 @@
     padding-top:2em;
 }
 aside{
-    display:none;
+    margin: auto;
+    border-bottom:1px solid;
 }
 .list-view > article{    
     margin: 0.5em;
@@ -182,9 +183,9 @@ a:hover{
                 flex-direction:row-reverse;
     }
     aside{
-        display:block;
+        border-bottom:0px solid;
+        margin:0px;
     }
-    
     .list-view > article{
         border-bottom: 0px solid;
         padding: 0;
