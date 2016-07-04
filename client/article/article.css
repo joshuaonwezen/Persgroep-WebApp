@@ -95,10 +95,8 @@ img{
 
 .aside-list{
     padding: 1em;
-    margin:2em;
-    margin-left: 0;
     height:100%;
-
+    max-width: 400px;
 
     background-color:#FFF;
     border-radius:5px;
@@ -108,6 +106,25 @@ img{
 }
 .aside-list a{
     color:#000;
+}
+.aside-list--register{
+    font-family: 'Bree Serif', serif;
+    width: 5em;
+    margin-left:0.5em;
+
+    background-color: #333;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333;
+    border-radius:5px;
+}
+.aside-list--register > a{
+    color:#FFF;
+}
+.aside-list--register > a:hover{
+    color:#FFF;
 }
 .article_header{
     height:10em;
@@ -185,6 +202,10 @@ a:hover{
     aside{
         border-bottom:0px solid;
         margin:0px;
+    }
+    .aside-list{
+        margin:2em;
+        margin-left:0px;
     }
     .list-view > article{
         border-bottom: 0px solid;

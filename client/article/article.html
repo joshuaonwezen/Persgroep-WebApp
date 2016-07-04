@@ -20,6 +20,17 @@
                 </ul>
             </section>
         </aside>
+        {{else}}
+        <aside>
+            <section class="aside-list">
+                <h2>Zelf nieuws schrijven?</h2>
+                <p>Lectio is een platform waarop jij zelf een nieuwsartikel kan schrijven. Verdien punten door artikelen te plaatsen en actief deel te nemen aan de community.</p>
+                <p>Onze top gebruikers krijgen vanuit de redactie opdrachtverzoeken waar zij zelfs geld mee kunnen verdienen.</p>
+                <button class="aside-list--register">                      
+                    <a href="{{pathFor route='register'}}">Register</a>
+                </button>
+            </section>
+        </aside>
         {{/if}}
         <section class="list-view">
             {{#each Article}}
