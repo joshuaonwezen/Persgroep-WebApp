@@ -1,9 +1,9 @@
 <template name="article"> 
-    <div class="container-row article_header">
+    <section class="container-row article_header">
         <img class="" src="img/previewimg4.jpg ">
         <h2><a href="#">Header artikel titel</a></h2>
-    </div>
-    <div class="container-row article-list-view">
+    </section>
+    <section class="container-row article-list-view">
         {{#if AccountStatus}}
         <aside>
             <section class="aside-list">
@@ -23,17 +23,17 @@
             <article class="hvr-bounce-out">
                 <a href="/article/{{_id}}">
                     <img class="article-image" src="{{image}}">
-                    <div class="article-textblock">
-                        <div class="article-textblock--likes">
+                    <section class="article-textblock">
+                        <section class="article-textblock--likes">
                             <h3>{{title}}</h3>
-                            <h3 class="article-textblock--likes-div"><img class="article-textblock--likes-icon" src="../img/like.png">{{likes}}</h3>
-                        </div>
+                            <h3 class="article-textblock--likes-section"><img class="article-textblock--likes-icon" src="../img/like.png">{{likes}}</h3>
+                        </section>
                         <span class="article-textblock-date">{{sent}}</span>
                         <span class="article-textblock-author">{{author}}</span>
-                    </div>
+                    </section>
                 </a>
             </article>
             {{/each}}
         </section>
-    </div>
+    </section>
 </template>

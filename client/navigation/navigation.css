@@ -38,6 +38,7 @@ header{
 }
 .container-header > h1 > a{
     color:#FFF;
+    font-size:1.5em;
 }
 nav{
     position: absolute;
@@ -87,7 +88,7 @@ li{
     padding: 0.1em;
     border-radius: 8px;
     margin-right: 0.1em;
-    margin-top: 0.7em;
+    margin-top: 0.5em;
     margin-bottom:0.5em;
     margin-left:0.5em;
 }

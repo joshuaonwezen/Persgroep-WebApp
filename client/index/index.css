@@ -24,6 +24,7 @@ body{
     margin: 0;
     background-color: #FFF;
     height: 100%;
+    font-size:1em;
 /*    min-height: -webkit-calc(100% - 5em);      Chrome 
     min-height: -moz-calc(100% - 5em);      Firefox 
     min-height: calc(100% - 5em);      native */
@@ -84,4 +85,7 @@ a:focus{
 
 .error-message{
     color:#F00
+}
+button{
+    margin-top:5px;
 }

@@ -5,13 +5,13 @@
             <article class="account-article--list-container">
             {{#if Commission.count}}
                 {{#each Commission}}
-                    <div>
+                    <article>
                         <a href="/commission/{{_id}}">
                             <label>{{name}}</label><br>
                             <img src="../{{image}}">
                         </a>
                         <button class="account-commission--delete">Verwijder</button>
-                    </div>
+                    </article>
                 {{/each}}
             {{else}}
                 <label class="account--content--empty">Je hebt nog geen opdrachtverzoeken geaccepteerd.</label>
@@ -23,13 +23,13 @@
             <article class="account-article--list-container">
             {{#if Article.count}}
                 {{#each Article}}
-                    <div>
+                    <article>
                         <a href="/article/{{_id}}">
                             <label>{{title}}</label>
                             <label class="account-article--sent">{{sent}}</label>
                         </a>
                         <button class="account-article--delete">Verwijder</button>
-                    </div>
+                    </article>
                 {{/each}}
             {{else}}
                 <label class="account--content--empty">Je hebt nog geen artikelen geschreven.</label>
@@ -41,10 +41,10 @@
             <article class="account-article--list-container">
             {{#if Trophy.count}}
                 {{#each Trophy}}
-                    <div>
+                    <article>
                         <label>{{name}}</label>
                         <img src="../{{image}}">
-                    </div>
+                    </article>
                 {{/each}}
             {{else}}
                 <label class="account--content--empty">Je hebt nog geen trofeeën verdient.</label>

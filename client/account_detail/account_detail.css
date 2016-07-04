@@ -50,7 +50,7 @@
     margin-top:1em;
     font-family: 'Bree Serif', serif;
 }
-.account-article--list-container > div{
+.account-article--list-container > article{
     display:-webkit-box;
     display:-webkit-flex;
     display:-ms-flexbox;
@@ -100,7 +100,7 @@ a{
     width: 160px;
     height: 100px;
 }
-.account-article--list-container > div, .account-article--list-container label{
+.account-article--list-container > article, .account-article--list-container label{
     cursor:pointer;
 }
 .account--content--empty{
@@ -108,7 +108,7 @@ a{
     cursor:auto!important;
 }
 @media all and (min-width:800px){
-    .account-article--list-container > div{
+    .account-article--list-container > article{
         max-width:50%;
         min-width:50%;
     }
