@@ -79,7 +79,7 @@ div[id*="medium-editor"]{
     margin-bottom: 5em;
     margin-top:0.5em;
 }
-.write-view--submit-row > #write-view--submit{
+#write-view--submit{
     font-family: 'Bree Serif', serif;
     width: 5em;
     margin-left:0.5em;

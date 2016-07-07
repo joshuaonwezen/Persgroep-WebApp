@@ -35,7 +35,10 @@
     max-width:700px;
     margin:auto;
 }
-.article-detail--content > article > img, .article-detail--content > article > iframe{
+.article-detail--content > article > img{
+    margin-bottom: 2em;
+}
+.article-detail--content > article > iframe{
     margin-bottom: 2em;
 }
 .article-detail--content h1{

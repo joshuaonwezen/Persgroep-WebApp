@@ -7,6 +7,9 @@
             <label class="commission-reward">Beloning -  {{reward}}</label>
             {{#if takenBy}}
             <label>Deze opdracht is geaccepteerd.</label>
+            <button class="aside-list--register">
+                <a href="{{pathFor route='write'}}">Schrijven</a>
+            </button>
             {{else}}
             <button class="commission-accept">Accepteren</button>
             {{/if}}

@@ -1,5 +1,31 @@
 http://joshonwezen.com/
 
+
+##Contents
+
+* Probleemdefinitie
+* User story dat mijn prototype uitlegd
+* Feature List
+* Code Examples & Structuur
+* Welke vakken komen terug in mijn app
+* Planning
+* Herkansing issues resolved
+
+
+##Probleemdefinitie
+
+Frank van de Persgroep kwam naar ons toe met het idee om een nieuwsplatform te beginnen voor jongeren. Jongeren komen de laatste jaren veel minder in aanraking met kranten
+wat voor de Persgroep een slecht teken is aangezien zij grote kranten onder hun namen hebben zoals de Volkskrant. Nu is het probleem niet dat jongeren minder geïnteresseerd zijn in nieuws. 
+Het probleem is dat jongeren tegenwoordig hun nieuws vinden op sites als vice.com of decorrespondent.nl, veel nieuwssites gebruiken tegenwoordig ook een structuur om abonnementen te houden via het internet. 
+Wij wilde voor ons nieuwsplatform echter niet aan abbonnementen denken. Voor dit prototype had Frank het idee om jongeren zelf nieuws te laten schrijven, user generated content is namelijk de toekomst (facebook, uber, airbnb).
+
+Nu wilde de Persgroep wel geld betalen aan jongeren zodat er wel kwaliteit content op komt, zo heb ik een account structuur bedacht waar een gebruiker Professional kan worden en nieuws kan schrijven.
+Dit geeft vaste gebruikers meer reden om te blijven schrijven voor de site, en vooral ook kwaliteit. Nieuwe gebruikers zullen hier niet zo snel in aanraking mee komen maar wel door een welkomsbericht op de hoogte
+gebracht worden van het bestaan van de Professional status. Wanneer de Professional status bereikt is zullen gebruikers opdrachtverzoeken krijgen zodat zij betaald kunnen krijgen, de beloning hiervoor staat bij het verzoek.
+
+De app moet een prototype zijn van het platform waar zelf content op geplaatst kan worden en gelezen, sorting is op basis van likes en spreekt voor zich, ook d.m.v. datum en author erbij te zetten. Verder moet het een idee krijgen van de site en dummy content zoals search balk / social media icons bevatten om iets van een
+sfeer te geven van wat er later mee gedaan kan worden. Niet alles hoeft functioneel te zijn dus, alleen de user story. 
+
 ##User Story
 
 * Naam: Rebekka
@@ -14,9 +40,8 @@ liefst hier ook geld voor verdienen maar status is ook van groot belang voor haa
 werk kan vinden.
 
 Op de site kan Rebekka andere nieuwsartikelen lezen van mensen die net zo'n passie voor schrijven hebben als zij en zit ze in een community met mensen
-met dezelfde interesses. Zelf wilt ze echter ook schrijven en daarom heeft ze een account aangemaakt op onze website, hiervoor moet ze eerst toegelaten worden
-als schrijver door middel van een proefartikel op te sturen. Nadat ze is toegelaten kan ze commenten op andere artikelen en zelf ook artikelen schrijven. 
-Haar doel is uiteindelijk om hier geld aan te verdienen en door genoeg erkenning binnen de community (likes op haar artikelen) kan zij de "Professional" status bereiken. Wanneer haar account "Professional" is krijgt zij
+met dezelfde interesses. Zelf wilt ze echter ook schrijven en daarom heeft ze een account aangemaakt op onze website. Met haar account kan ze commenten op andere artikelen en zelf ook artikelen schrijven. 
+Haar doel is uiteindelijk om hier geld aan te verdienen en door genoeg erkenning binnen de community (likes op haar artikelen) of door een actieve gebruiker te zijn kan zij de "Professional" status bereiken. Wanneer haar account "Professional" is krijgt zij
 een extra tab te zien op de site met opdrachtverzoeken die zij kan accepteren.
 
 
@@ -39,6 +64,27 @@ Extra Features:
 * Categories (dummy)
 * Social media buttons (dummy)
 * Trophy's
+
+
+##Code examples
+
+
+De persgroep app die ik gebouwd heb is gebouwd in Meteor. Hieronder is zichtbaar hoe ik de filestructuur heb opgezet.
+
+![alt tag](readme_images/filestructuur.png)
+
+
+De frontend van de app is gedaan met blaze, templates en spacebars. Hieronder is een voorbeeld te zien waarin 3 verschillende HTML codes ingeladen worden op basis van de account status van de gebruiker.
+
+![alt tag](readme_images/html.png)
+
+
+Voor de backend structuur heb ik voor elke actie een method aangemaakt zodat het overzichtelijk blijft wat er wordt aangepast.
+Hieronder is een voorbeeld te zien van het user likes systeem. Zo heb ik voor elk artikel een array met de personen die het geliked/disliked hebben en haal ik vervolgens deze personen er weer uit wanneer zij hun mening over het artikel aanpassen.
+
+![alt tag](readme_images/methods.png)
+
+
 
 
 ##Real-Time Web
@@ -100,3 +146,24 @@ Mijn planning zoals hij was en geupdate is elke week. Verder werktte ik met feat
 
 
 ![alt tag](readme_images/trello.png)
+
+
+##Herkansing issues
+
+De commit namen en issue namen komen vrijwel overeen, er is duidelijk uit op te maken welke bij welke hoort dus dit zal ik niet verder uitleggen.
+
+
+Issue 1: Naam veranderen van de app - De Persgroep was geen goeie naam aangezien het van de opdrachtgever is hoorde ik tijdens de feedback, dus dit heb ik verandert in "Lectio" wat lezen in het latijn betekend.
+
+Issue 2: Groter lettertype, meer relative units en in het geheel de site vergroten (oogt klein op desktop) - Gefixt door lettertype te wijzigen en de width van de content tabjes te verhogen.
+
+Issue 3: Opdrachtverzoeken lijst niet zichtbaar klikbaar - Kreeg hier als feedback op dat een simpele oplossing was om hier bijvoorbeeld bullet points voor te zetten zodat het duidelijk maakte dat het losse selecteerbare items waren.
+
+Issue 4: Uitleg voor niet ingelogde gebruikers om de flow te verbeteren van het prototype - Uitleg tekst neergezet wanneer niet is ingelogd of wanneer niet Professional status bereikt is. Wanneer wel de Professional status bereikt is zullen gebruikers
+geen tekstje zien aangezien het doel van de site dan al duidelijk is en er gewoon via opdrachtverzoeken naar het schrijven genavigeert kan worden.
+
+Issue 5: Teveel divs - Aangepast zodat nu alle divs die articles of sections hoorde te zijn dit ook echt zijn.
+
+Issue 6: Probleemdefinitie in readme en opbouw - Gefixt door probleemdefinitie uit te schrijven onderbouwd door een user story die mijn prototype uitlegd. Verder inhoudsopgave gemaakt die elk hoofdstuk in de readme uitlegd.
+
+Issue 7: CSS verbeterd - Globaal alles aangepast zodat er kortere minder complexe selectors zijn.

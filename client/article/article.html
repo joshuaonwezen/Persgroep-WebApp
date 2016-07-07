@@ -5,29 +5,33 @@
     </section>
     <section class="container-row article-list-view">
         {{#if AccountStatus}}
-        <aside>
-            <section class="aside-list">
-                <h2>Opdrachtverzoeken</h2>
-                <ul>
-                {{#each Commission}}
-                {{#if takenBy = ''}}
-                
-                <li>
-                    <a href="/commission/{{_id}}">{{name}}</a>
-                </li>
-                {{/if}}
-                {{/each}}
-                </ul>
-            </section>
-        </aside>
+                <aside>
+                    <section class="aside-list">
+                        <h2>Opdrachtverzoeken</h2>
+                        <ul>
+                        {{#each Commission}}
+                        {{#if takenBy = ''}}
+
+                        <li>
+                            <a href="/commission/{{_id}}">{{name}}</a>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                        </ul>
+                    </section>
+                </aside>
         {{else}}
         <aside>
             <section class="aside-list">
                 <h2>Zelf nieuws schrijven?</h2>
                 <p>Lectio is een platform waarop jij zelf een nieuwsartikel kan schrijven. Verdien punten door artikelen te plaatsen en actief deel te nemen aan de community.</p>
                 <p>Onze top gebruikers krijgen vanuit de redactie opdrachtverzoeken waar zij zelfs geld mee kunnen verdienen.</p>
-                <button class="aside-list--register">                      
+                <button class="aside-list--register">
+                    {{#if currentUser}}
+                    <a href="{{pathFor route='write'}}">Schrijven</a>
+                    {{else}}
                     <a href="{{pathFor route='register'}}">Register</a>
+                    {{/if}}
                 </button>
             </section>
         </aside>
