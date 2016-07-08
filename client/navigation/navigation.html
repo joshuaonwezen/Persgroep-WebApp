@@ -9,27 +9,27 @@
                     <li class="nav-responsive-menu">
                         <a href="#" class="menu-icon border-icon">menu icon</a>
                     </li>
-                    <li class="hvr-bounce-in">
+                    <li class="bounce-in">
                         <input type="text" placeholder="Zoeken">
                     </li>
-                    <li class="hvr-bounce-in">
+                    <li class="bounce-in">
                         <a  href="{{pathFor route='category'}}">Categorieën</a>
                     </li>
                     {{#if currentUser}}
-                    <li class="hvr-bounce-in">
+                    <li class="bounce-in">
                         <a href="{{pathFor route='write'}}">Schrijven</a>
                     </li>
-                    <li class="hvr-bounce-in">
+                    <li class="bounce-in">
                         <a href="/account/{{name}}">{{name}}</a>
                     </li>
-                    <li class="hvr-bounce-in">
+                    <li class="bounce-in">
                         <a href="#" class="logout">Logout</a>
                     </li>
                     {{else}}
-                    <li class="hvr-bounce-in">
+                    <li class="bounce-in">
                         <a href="{{pathFor route='register'}}">Register</a>
                     </li>
-                    <li class="hvr-bounce-in">
+                    <li class="bounce-in">
                         <a href="{{pathFor route='login'}}">Login</a>
                     </li>
                     {{/if}}

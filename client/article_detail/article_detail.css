@@ -5,7 +5,7 @@
     color: #000;
     height:939px;
 }*/
-.article-detail--like, .article-detail--dislike{
+.article-detail--like-button{
     font-family: 'Bree Serif', serif;
     width: 5em;
     margin-left:0.5em;

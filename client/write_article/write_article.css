@@ -93,6 +93,7 @@ div[id*="medium-editor"]{
     border-radius:5px;
     color:#FFF;
 }
+/* Styles the input rows */
 .write-view--title-row input[type="text"], .write-view--input-row input[type="text"] {
     padding: 10px;
     border: solid 1px #dcdcdc;

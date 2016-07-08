@@ -15,6 +15,7 @@
         max-width: 700px;
     margin: auto;
 }
+/* Styles the different content blocks to have a max width  and be centered*/
 .account--content > article{
     border-bottom: 1px solid #333;
     margin: 1em;
@@ -68,7 +69,7 @@
 :after {
   border-bottom: solid 2px #333;
 }
-.account-article--delete, .account-commission--delete{
+.account-content--delete{
     font-family: 'Bree Serif', serif;
     width: 6em;
 

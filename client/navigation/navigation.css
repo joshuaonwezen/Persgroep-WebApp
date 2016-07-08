@@ -1,3 +1,4 @@
+/* Header */
 
 header{
     background-color: #333;
@@ -83,6 +84,7 @@ nav li{
     background-color:#FFF;
     margin:0.5em;
 }
+/* Styles the nav menu for mobile */
 .nav-responsive-menu{
     background-color:#333;
     padding: 0.1em;
@@ -147,8 +149,8 @@ nav li > a{
     }
 
 }
-/* Bounce In */
-.hvr-bounce-in {
+/* Bounces the article with transform*/
+.bounce-in {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -160,7 +162,7 @@ nav li > a{
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+.bounce-in:hover, .bounce-in:focus, .bounce-in:active {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
       transform: scale(1.1);
