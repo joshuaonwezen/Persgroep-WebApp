@@ -169,20 +169,20 @@ De standaard functies zoals registreren en inloggen heb ik hier toegevoegd. Verd
 
 Vb. hiervan:
 
-Article ->
-     * title
-     * content
-     * author
-     * sent
-     * userId
-     * likes
-     * image
-     * video
-     * likedBy
-     * dislikedBy
-     * comments
-     * id
-     * addedAt
+Article -
+* title
+* content
+* author
+* sent
+* userId
+* likes
+* image
+* video
+* likedBy[]
+* dislikedBy[]
+* comments[]
+* id
+* addedAt
 
 
 Verder heb ik de routing opgezet en heb ik gekeken naar de mogelijkheden voor bijvoorbeeld file upload op de server en een texteditor.
