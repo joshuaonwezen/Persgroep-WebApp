@@ -149,7 +149,7 @@ nav li > a{
     }
 
 }
-/* Bounces the article with transform*/
+/* Bounces the button with transform*/
 .bounce-in {
   display: inline-block;
   vertical-align: middle;
