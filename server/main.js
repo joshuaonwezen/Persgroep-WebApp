@@ -1,4 +1,5 @@
 Meteor.startup(function () {
+  //Server upload
   UploadServer.init({
     tmpDir: __meteor_bootstrap__.serverDir + '/uploads/tmp',
     uploadDir: __meteor_bootstrap__.serverDir +  '/uploads/',
@@ -23,6 +24,7 @@ Meteor.startup(function () {
 });
 
 
+//Update account based on current data
 //Meteor.users.after.update(function (userId, doc, fieldNames, modifier) {
 //  if (doc.points > 200) {
 ////        Meteor.users.update({"profile.id" : doc.id}, {$set: {"profile.professional" : true}});

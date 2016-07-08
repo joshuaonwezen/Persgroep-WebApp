@@ -5,6 +5,7 @@ Template.write_article.helpers({
 });
 
 Template.write_article.rendered = function () {
+    //Adds the text editor
     mediumEdit = new MediumEditor('#write-view--textarea', {
         relativeContainer: $('#write-view--textarea'),
         placeholder: {

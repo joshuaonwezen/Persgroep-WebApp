@@ -2,6 +2,7 @@ Meteor.publish('Article', function () {
     return Article.find();
 });
 
+//Add new commissions if they don't exist
 Meteor.publish('Commission', function () {
     if (Commission.find().count() <= 0) {
         Commission.insert({
@@ -32,6 +33,7 @@ Meteor.publish('Commission', function () {
     return Commission.find();
 });
 
+//Add new trophies if they don't exist
 Meteor.publish('Trophy', function () {
     if (Trophy.find().count() <= 0) {
         Trophy.insert({
