@@ -85,6 +85,15 @@ Hieronder is een voorbeeld te zien van het user likes systeem. Zo heb ik voor el
 ![alt tag](readme_images/methods.png)
 
 
+Experience structuur uitgelegd:
+
+* Comment - 5 punten
+* Like/Dislike - 5 punten
+* Artikel schrijven - 50 punten
+* Professional status behalen = 200 punten + 1 article
+
+Dit wordt allemaal achter de schermen gehouden aangezien het niet belangrijk is om precies te weten hoeveel punten je hebt en hoeveel je verdient. Voor een gebruiker is het alleen belangrijk om te weten
+dat je een actieve gebruiker moet zijn om Professional status te bereiken.
 
 
 ##Real-Time Web
@@ -146,6 +155,69 @@ Mijn planning zoals hij was en geupdate is elke week. Verder werktte ik met feat
 
 
 ![alt tag](readme_images/trello.png)
+
+
+###Week 1
+
+In week 1 heb ik mij vooral gefocused op het maken van wireframes en het idee van Frank uitwerken. 
+Ik heb een meteor app opgezet en hier wat basic dingen in gestopt om alvast aan Frank te laten zien.
+
+
+###Week 2
+
+De standaard functies zoals registreren en inloggen heb ik hier toegevoegd. Verder heb ik de collection structuur uitgewerkt en in mijn procesboek opgeschreven:
+
+Vb. hiervan:
+
+Article ->
+     * title
+     * content
+     * author
+     * sent
+     * userId
+     * likes
+     * image
+     * video
+     * likedBy
+     * dislikedBy
+     * comments
+     * id
+     * addedAt
+
+
+Verder heb ik de routing opgezet en heb ik gekeken naar de mogelijkheden voor bijvoorbeeld file upload op de server en een texteditor.
+
+
+###Week 3
+
+In week 3 heb ik mij gefocused op de artikel schrijven pagina en het uitwerken hiervan. Meerdere texteditors geprobeerd en de styling toegepast
+zodat ik aan Frank al een basic prototype had om te laten zien wat er goed uit zag. Verder heb ik de logica achter het experience systeem toegevoegd.
+Bij het experience systeem gebeurd alles achter de schermen en het moet ook niet duidelijk zijn voor de gebruiker hoe er precies punten worden verdient
+aangezien dit niet per se belangrijk is voor hun.
+
+Hoe de punten werken:
+
+* Comment - 5 punten
+* Like/Dislike - 5 punten
+* Artikel schrijven - 50 punten
+* Professional status behalen = 200 punten
+
+Verder heb ik op basis van likes de sorting gedaan zodat er een realtime element in komt (buiten het verkrijgen van punten).
+
+
+###Week 4
+
+In week 4 heb ik extra's als een comment systeem toegevoegd en het likes/dislikes systeem afgebouwd en gefinetuned. Verder heb ik de opdrachtverzoeken erin
+geplaatst zodat deze gebruikt kunnen worden. Ik heb in deze week mij vooral op CSS gefocused.
+
+
+###Week 5
+
+In de laatste week heb ik nog even goed naar bijv. Kadira gekeken om de performance te meten, bekeken waar dit beter kon en dit aangepast. Verder heb ik nog de 
+laatste hand aan mijn CSS gelegd en heb ik een trophy systeem (op verzoek van Frank) toegevoegd. Het trophy systeem heb ik uiteindelijk achter de schermen gehouden op
+aanrader van de leraren aangezien zij dit toch niet zo'n goed idee vonden.
+
+
 
 
 ##Herkansing issues

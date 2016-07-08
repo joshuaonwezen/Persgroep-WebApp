@@ -25,6 +25,8 @@
     padding-top:2em;
 }
 aside{
+    min-width:90%;
+    max-width:90%;
     margin: auto;
     border-bottom:1px solid;
 }
@@ -95,6 +97,7 @@ img{
 
 .aside-list{
     padding: 1em;
+    padding-left:0;
     height:100%;
     max-width: 400px;
 
@@ -107,9 +110,12 @@ img{
 .aside-list a{
     color:#000;
 }
+.aside-list > ul > li{
+    padding-bottom:7px;
+}
 .aside-list--register{
     font-family: 'Bree Serif', serif;
-    width: 5em;
+    width: 6em;
 
     background-color: #333;
     box-sizing: border-box;
@@ -201,6 +207,8 @@ a:hover{
     aside{
         border-bottom:0px solid;
         margin:0px;
+        max-width:30%;
+        min-width:0;
     }
     .aside-list{
         margin:2em;

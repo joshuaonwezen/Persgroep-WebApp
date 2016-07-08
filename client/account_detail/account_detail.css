@@ -92,6 +92,7 @@ a{
     font-style: italic; 
 }
 .account-trophy--list img{
+    max-height: 8em;
     min-width:30%;
     max-width:30%;
     padding-bottom: 30px;
